@@ -1,7 +1,7 @@
 <template>
   <el-row>
-    <!-- <el-col :span="12">{{ $props.quote.time }}</el-col> -->
-    <el-col :span="12">{{ $props.quote.price }}</el-col>
+    <el-col>${{ $props.quote.price }}</el-col>
+    <el-col>At {{ $moment($props.quote.time, "hmm").format('LT') }}</el-col>
   </el-row>
 </template>
 

@@ -1,5 +1,13 @@
 <template>
   <el-table :data="crytoList" style="width: 100%">
+    <el-table-column
+      prop="date"
+      label="Date"
+      style="width:20%"
+      :formatter="(row, column)=> 
+    $moment(row.date ).format('DD-MMMM-YYYY')
+    "
+    />
     <el-table-column prop="currency" label="Currency" style="width:20%" />
 
     <el-table-column label="Buy">
