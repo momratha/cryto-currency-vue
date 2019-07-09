@@ -8,6 +8,9 @@
       <template v-slot:max="{max}">
         <Quote :quote="getMax(max)" />
       </template>
+      <template
+        v-slot:profit="{profit}"
+      >${{ (getMax(profit).price - getMin(profit).price ).toFixed(2)}}</template>
     </CrytoCurrency>
   </div>
 </template>

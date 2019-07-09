@@ -21,6 +21,11 @@
         <slot name="max" v-bind:max="scope.row.quotes">Sell</slot>
       </template>
     </el-table-column>
+    <el-table-column label="Profit">
+      <template slot-scope="scope">
+        <slot name="profit" v-bind:profit="scope.row.quotes">Profit</slot>
+      </template>
+    </el-table-column>
   </el-table>
 </template>
 
